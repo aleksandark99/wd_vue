@@ -66,9 +66,9 @@
     </div>
     <b-table responsive :fields="fields" :items="items" :sort-by.sync="sortBy"  
 >
-      <template v-slot:cell(film.naziv)="data">
+      <!-- <template v-slot:cell(film.naziv)="data">
         <router-link :to="`/film/${data.item.film.id}`">{{ data.value}}</router-link>
-      </template>
+      </template> -->
           <template v-slot:cell(datum)="data">
         <router-link :to="`/projekcija/${data.item.id}`">{{ data.value}}</router-link>
       </template>
@@ -195,6 +195,7 @@ export default {
 
      var doDate=this.testf();
       this.items=[]
+    
       axios
       .get(`http://localhost:8081/SF-15-2018-OWP/ProjekcijeServlet?movie=${this.a}&tip=${this.tip}&min=${this.b}&max=${this.c}&odDate=${odDate}&doDate=${doDate}`)
       .then(res => (this.items = res.data))
@@ -214,7 +215,7 @@ export default {
             if(this.$store.state.testP!=""){
           this.a=this.$store.state.testP;
          this.$store.commit("changetestP","");
-        this.filterProjekcije()
+         this.filterProjekcije()
       }
           })
       .catch(err => console.log(err));
@@ -223,8 +224,8 @@ export default {
     axios
       .get("http://localhost:8081/SF-15-2018-OWP/SaleServlet")
       .then(function(response){
-      for (var i = 0; i < response.data.length; i++) {
-         op.push({ value: response.data[i].id, text: response.data[i].naizv })
+      for (var i = 0; i < response.data.sale.length; i++) {
+         op.push({ value: response.data.sale[i].id, text: response.data.sale[i].naizv })
       } 
       })
       .catch(err => console.log(err));   

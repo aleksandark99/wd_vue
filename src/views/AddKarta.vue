@@ -145,24 +145,33 @@ export default {
         `http://localhost:8081/SF-15-2018-OWP/ProjekcijaServlet?id=${this.id}`
       )
       .then(res => {
+           console.log("hello")
+
+
+
         this.items.push(res.data.projekcija);
         // this.sedista=(res.data.sedista);
         for(var i=0; i<res.data.sedista.length;i++)
         {
           // console.log(res.data.sedista[i].redniBroj)
           this.sedista.push({id:res.data.sedista[i].redniBroj ,disabled:false, redniBroj:res.data.sedista[i].redniBroj})
+       
         }
 
 
         // console.log(this.sedista);       
       })
       .catch(err => console.log(err));
+           console.log("hello")
 
      axios
      .get(`http://localhost:8081/SF-15-2018-OWP/ZauzetaSedista?id_projekcije=${this.id}`)
      .then(res=>{
+              console.log("hi")
+
        this.zzz=res.data.zauzetaSedista
-       console.log(this.zzz)
+       console.log(res.data.zauzetaSedista)
+                  console.log("OOOOO")
      })
      .catch(err=>console.log(err))
   },
