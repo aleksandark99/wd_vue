@@ -11,7 +11,7 @@
           <b-nav-item v-show="admin" to="/users">Users</b-nav-item>
           <b-button v-show="admin" to="/addMovie" variant="success">Add Movie</b-button>
           <b-button v-show="admin" to="/addProjekcija" variant="success">Add Projekcija</b-button>
-                    <b-button v-show="admin" to="/izvestaj" variant="success">Izvestaj</b-button>
+          <b-button v-show="admin" to="/izvestaj" variant="success">Izvestaj</b-button>
 
 
               <b-button
@@ -108,16 +108,18 @@ export default {
 <style scoped>
 .btn-success {
   margin-right: 5px;
-}
+  padding-bottom: 5px;
+  }
 .user {
   display: none;
   visibility: hidden;
 }
 #navTitle {
   color: #2c3e50;
+  margin-bottom: 5px;
 }
 #nav a.router-link-exact-active {
-  color: purple;
+  color: #2c3e50;
 }
 #reg {
   color: white;

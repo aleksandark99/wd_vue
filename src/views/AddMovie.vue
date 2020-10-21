@@ -140,7 +140,7 @@ export default {
           .then(function(response) {
             console.log(response);
             if (response.data.status == "failure") {
-              alert("Korisnicko ime je zauzeto");
+              alert("Niste ispavno popunili podatke");
             }
             if (response.data.status == "success") {
               alert("Uspeno ste se dodali film");
