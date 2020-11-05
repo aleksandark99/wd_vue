@@ -1,4 +1,4 @@
-# bioskopvue
+# Cinema frontend
 
  This is frontend for [this project](https://github.com/aleksandark99/OWP_Projekat).
  Project specification can be found [here](https://drive.google.com/file/d/1R-pI6pwEbrrqtTeTW-TMeCXAMRt8f0nQ/view?usp=sharing).
