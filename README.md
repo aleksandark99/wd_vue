@@ -1,6 +1,6 @@
 # bioskopvue
 
- Project specification can be found [here](https://github.com/aleksandark99/images-in-readme/files/5494182/wd_projekat_specifikacija_2019.pdf).
+ Project specification can be found [here](https://drive.google.com/file/d/1R-pI6pwEbrrqtTeTW-TMeCXAMRt8f0nQ/view?usp=sharing).
 
 
 ![projekcije](https://user-images.githubusercontent.com/48245241/98239953-0a506480-1f69-11eb-8bcb-94002e617312.png)
