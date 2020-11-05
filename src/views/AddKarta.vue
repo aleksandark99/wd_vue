@@ -190,6 +190,7 @@ export default {
       var x = this.selektovanaSedista.sort();
       for (var i = 0; i + 1 < x.length; i++) {
         if (x[i].substr(1) == parseInt(x[1 + i].substr(1)) - 1) {
+          console.log(x[i].substr(1) + "||||" + x[1 + i].substr(1));
         } else {
           if (x.length != 1) {
             alert("Sedista moraju biti jedna do drugih");
