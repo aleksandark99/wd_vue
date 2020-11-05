@@ -1,24 +1,7 @@
 # bioskopvue
 
-## Project setup
-```
-npm install
-```
+## Project specification can be found [here](https://github.com/aleksandark99/images-in-readme/files/5494182/wd_projekat_specifikacija_2019.pdf).
 
-### Compiles and hot-reloads for development
-```
-npm run serve
-```
 
-### Compiles and minifies for production
-```
-npm run build
-```
 
-### Lints and fixes files
-```
-npm run lint
-```
 
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
