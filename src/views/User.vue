@@ -322,7 +322,6 @@ axios.get(`http://localhost:8081/SF-15-2018-OWP/KorisnikServlet?username=${this.
 //
       axios
       .get(
-        // `http://localhost:8081/SF-15-2018-OWP/KarteKorisnikaServlet?username=${this.$store.state.user.username}`
         `http://localhost:8081/SF-15-2018-OWP/KarteKorisnikaServlet?username=${this.username}`
 
 )

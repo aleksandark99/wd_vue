@@ -1,9 +1,5 @@
 <template>
   <div>
-    <!-- <b-button to="/addUser">Add User</b-button> -->
-
-    <!-- <input @input="filterMovie" placeholder="edit me"> -->
-
     <div class="container" id="s">
       <div class="row">
         <div class="col-md-4 mx-auto">
@@ -71,7 +67,9 @@
 
     <b-table responsive :fields="fields" :items="items">
       <template v-slot:cell(naziv)="data">
-        <router-link :to="`/film/${data.item.id}`">{{ data.value}}</router-link>
+        <router-link :to="`/film/${data.item.id}`">{{
+          data.value
+        }}</router-link>
       </template>
     </b-table>
   </div>
@@ -95,32 +93,32 @@ export default {
       fields: [
         {
           key: "naziv",
-          sortable: true
+          sortable: true,
         },
         {
           key: "zanrovi",
-          sortable: true
+          sortable: true,
         },
         {
           key: "trajanje",
-          sortable: true
+          sortable: true,
         },
         {
           key: "distributer",
-          sortable: true
+          sortable: true,
         },
         {
           label: "Zemlja Porekla",
           key: "zemljaPorekla",
-          sortable: true
+          sortable: true,
         },
         {
           label: "Godina Proizvodnje",
           key: "godina",
-          sortable: true
-        }
+          sortable: true,
+        },
       ],
-      items: []
+      items: [],
     };
   },
 
@@ -138,8 +136,7 @@ export default {
         .get(
           `http://localhost:8081/SF-15-2018-OWP/FilmoviServlet?nazivFilma=${this.a}&trajanje=${this.b}&zemljaPorekla=${this.c}&zanr=${this.d}&distributer=${this.e}&godina=${this.f}`
         )
-        // .then(res =>  this.items=res.data)
-        .then(res => {
+        .then((res) => {
           this.items = res.data;
           if (this.b === 0) {
             this.b = "";
@@ -149,19 +146,15 @@ export default {
           }
         })
 
-        // .then(res =>  console.log("sss"+typeof( res.data)))
-        .catch(err => console.log(err));
-    }
+        .catch((err) => console.log(err));
+    },
   },
   mounted() {
-    //'http://172.16.170.175:8081/SF-15-2018-OWP/FilmoviServlet'
-    // 'http://localhost:8081/SF-15-2018-OWP/FilmoviServlet'
     axios
       .get("http://localhost:8081/SF-15-2018-OWP/FilmoviServlet")
-      .then(res => (this.items = res.data))
-      // .then(res =>  console.log("sss"+res.data))
-      .catch(err => console.log(err));
-  }
+      .then((res) => (this.items = res.data))
+      .catch((err) => console.log(err));
+  },
 };
 </script>
 <style scoped>

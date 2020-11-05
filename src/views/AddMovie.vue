@@ -153,7 +153,7 @@ export default {
           });
 
     },
-    onReset(evt) { //izignorisi ostalo od copy paste ....
+    onReset(evt) { 
       evt.preventDefault();
       this.form.username = "";
       this.form.password = "";

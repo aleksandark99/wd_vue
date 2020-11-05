@@ -5,7 +5,6 @@
         <router-link :to="`/film/${data.item.film.id}`">{{ data.value}}</router-link>
       </template>
     </b-table>
-    <!-- <b-button v-show="seen" :to="`/AddKarta/${data.items[0].id}`"  variant="success">Kupi kartu</b-button> -->
     <b-button v-show="s"  :to="`/AddKarta/${this.id}`" variant="danger">Kupi kartu</b-button>
     <br>
     <br>
@@ -33,15 +32,11 @@
        <b-table responsive :fields="fieldsKarte" :items="itemsKarte" v-if="this.$store.state.adminSeen">
       <template v-slot:cell(datum)="data">
         <router-link  :to="`/karta/${data.item.projekcija}`">{{ data.value}}</router-link>
-                <!-- <router-link  :to="`/karta/${data.item.projekcija}`">{{ data.value}}</router-link> -->
-
       </template>
     </b-table>
   </div>
 </template>
 <script>
-// import router from '../router/index.js'
-
 import axios from "axios";
 export default {
   name: "Projekcija",
@@ -167,9 +162,7 @@ export default {
   mounted() {
     console.log(this.id);
     this.s = this.$store.state.loggedIn;
-    //   if(this.$store.state.seen==true){
-    //     this.show=true;
-    //   }
+
   
     axios
       .get(
